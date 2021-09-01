@@ -1,0 +1,93 @@
+.login {
+	margin: 30vh auto;
+	background-color: #dee2e6;
+	width: 30%;
+	padding: 2rem;
+	border-radius: 12px;
+}
+
+.title {
+	display: block;
+	margin: 0 auto 2rem auto;
+	text-align: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 80%;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+}
+
+.form-row {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: center;
+}
+
+.form-row label {
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	align-self: flex-start;
+}
+
+.form-row input {
+	padding: 8px;
+	font-size: 16px;
+	width: 100%;
+}
+
+.form button {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	width: 50%;
+	padding: 12px 12px;
+	border: none;
+	margin: 0 auto;
+	border-radius: 12px;
+	cursor: pointer;
+	background-color: #212529;
+	color: #fff;
+	transition: all 0.4s;
+}
+
+.form button:hover,
+.form button:active {
+	color: #212529;
+	background-color: #adb5bd;
+}
+
+.error-msg {
+	color: #ff6b6b;
+	font-size: 12px;
+	margin: -2px 0;
+	padding: 0;
+	align-self: flex-start;
+}
+
+.btn-signup {
+	display: block;
+	margin: 1rem auto 0 auto;
+	border: none;
+	padding: 4px;
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
+	background-color: inherit;
+	transition: all 0.4s;
+	font-weight: 300;
+}
+
+.btn-signup a {
+	text-decoration: none;
+	color: #212529;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+	transform: translateY(-5%);
+}
