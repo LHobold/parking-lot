@@ -1,11 +1,14 @@
 import Layout from '../components/Layout/Layout';
 import '../styles/globals.css';
+import { ParkContextProvider } from '../src/store/park-context';
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Layout>
-			<Component {...pageProps} />
-		</Layout>
+		<ParkContextProvider>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</ParkContextProvider>
 	);
 }
 

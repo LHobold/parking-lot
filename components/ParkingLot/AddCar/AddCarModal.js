@@ -2,12 +2,16 @@ import React from 'react';
 import styles from './AddCarModal.module.css';
 import ReactDOM from 'react-dom';
 import { Formik } from 'formik';
+import { useParkContext } from '../../../src/store/park-context';
 
 const BackDrop = props => {
 	return <div onClick={props.onClick} className={styles.backdrop}></div>;
 };
 
 const ModalOverlay = props => {
+	const parkCtx = useParkContext();
+	const [sendingData, setSendingData] = React.useState(null);
+
 	return (
 		<div className={styles.modal}>
 			<header className={styles.header}>
@@ -34,6 +38,7 @@ const ModalOverlay = props => {
 					return errors;
 				}}
 				onSubmit={async (values, { setSubmitting }) => {
+					setSendingData('Adding...');
 					const res = await fetch('/api/parked-cars', {
 						method: 'POST',
 						headers: {
@@ -42,13 +47,14 @@ const ModalOverlay = props => {
 						body: JSON.stringify(values),
 					});
 					const data = await res.json();
-					console.log(data);
 					if (data.status === 'success') {
-						console.log(props);
-						props.onAddCar(data.data);
+						parkCtx.addCar(data.data);
+						setSendingData('Added');
+					} else {
+						setSendingData('Error');
 					}
 					setSubmitting(false);
-					props.onClick();
+					setTimeout(props.onClick, 2000);
 				}}
 			>
 				{({
@@ -110,7 +116,7 @@ const ModalOverlay = props => {
 							disabled={isSubmitting}
 							className={`${styles['btn']} ${styles['btn--login']}`}
 						>
-							Add car
+							{sendingData ? sendingData : 'Add car'}
 						</button>
 					</form>
 				)}
@@ -127,11 +133,7 @@ const AddCarModal = props => {
 				document.getElementById('backdrop-root')
 			)}
 			{ReactDOM.createPortal(
-				<ModalOverlay
-					onAddCar={props.onAddCar}
-					onClick={props.onClick}
-					title={props.title}
-				/>,
+				<ModalOverlay onClick={props.onClick} title={props.title} />,
 				document.getElementById('backdrop-root')
 			)}
 		</>

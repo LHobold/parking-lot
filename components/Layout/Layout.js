@@ -5,8 +5,6 @@ import { useState } from 'react';
 import logo from '../../assets/logo.svg';
 
 const Layout = props => {
-	const [isLoggedIn, setIsLoggedIn] = useState(true);
-
 	return (
 		<Fragment>
 			<header className={styles.header}>
@@ -18,27 +16,24 @@ const Layout = props => {
 				<nav className={styles['main-nav']}>
 					<ul>
 						<li>
-							{isLoggedIn && (
-								<Link href="/parking-lot/settings" passHref>
-									<a className={styles.btn}>Settings</a>
-								</Link>
-							)}
+							<Link href="/parking-lot/settings" passHref>
+								<a className={styles.btn}>Settings</a>
+							</Link>
 						</li>
 						<li>
-							{!isLoggedIn && (
-								<Link href="/auth/login" passHref>
-									<a className={`${styles['btn']} ${styles['btn--login']}`}>
-										Login
-									</a>
-								</Link>
-							)}
-							{isLoggedIn && (
-								<Link href="/auth/login" passHref>
+							<Link href="/parking-lot" passHref>
+								<a className={`${styles['btn']} ${styles['btn--login']}`}>
+									Parking Lot
+								</a>
+							</Link>
+
+							{/* {isLoggedIn && (
+								<Link href="/parking-lot" passHref>
 									<a className={`${styles['btn']} ${styles['btn--login']}`}>
 										Logout
 									</a>
 								</Link>
-							)}
+							)} */}
 						</li>
 					</ul>
 				</nav>
