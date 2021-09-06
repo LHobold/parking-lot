@@ -21,7 +21,7 @@ const ModalOverlay = props => {
 
 	const timeInLot = arrivedAt => {
 		const nowMs = Date.now();
-		const arrivedAtMs = new Date(props.content.arrivedAt).getTime();
+		const arrivedAtMs = new Date(arrivedAt).getTime();
 		const timeInMiliseconds = nowMs - arrivedAtMs;
 		return formatTime(timeInMiliseconds);
 	};
