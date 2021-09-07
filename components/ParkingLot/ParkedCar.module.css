@@ -1,85 +1,85 @@
 .parked-car {
-	background-color: #343a40;
-	padding: 1rem;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	min-height: 4rem;
-	border-radius: 12px;
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
+  background-color: #343a40;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  border-radius: 12px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
 }
 
 .car-info {
-	display: flex;
-	gap: 32px;
-	align-items: center;
-	text-align: center;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  text-align: center;
 }
 
 .info {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
 }
 
 .info label {
-	font-size: 1.2rem;
-	font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .info p {
-	font-weight: 500;
-	margin: 0;
-	font-size: 1rem;
-	justify-self: flex-end;
+  font-weight: 500;
+  margin: 0;
+  font-size: 1rem;
+  justify-self: flex-end;
 }
 
 .info::after {
-	content: '';
-	position: absolute;
-	right: -16px;
-	width: 5px;
-	background-color: #fff;
-	height: 100%;
-	transform: translateX(50%);
+  content: '';
+  position: absolute;
+  right: -16px;
+  width: 5px;
+  background-color: #fff;
+  height: 100%;
+  transform: translateX(50%);
 }
 
 .action {
-	display: flex;
-	flex-direction: row;
-	gap: 16px;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
 }
 
 .action button {
-	border: none;
-	padding: 0.6rem;
+  border: none;
+  padding: 0.6rem;
 
-	background-color: #fff;
-	font-size: 1.6rem;
-	width: 48px;
-	height: 48px;
-	font-weight: 700;
-	color: #343a40;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	transition: all 0.4s;
+  background-color: #fff;
+  font-size: 1.6rem;
+  width: 48px;
+  height: 48px;
+  font-weight: 700;
+  color: #343a40;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s;
 }
 
 .action button:hover,
 .action button:active {
-	background-color: #adb5bd;
-	transform: scale(1.05);
+  background-color: #adb5bd;
+  transform: scale(1.05);
 }
 
 .spinner {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

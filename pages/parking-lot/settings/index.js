@@ -1,7 +1,7 @@
 import Settings from '../../../components/ParkingLot/Settings/Settings';
 
 const SettingsPage = () => {
-	return <Settings />;
+  return <Settings />;
 };
 
 export default SettingsPage;

@@ -1,68 +1,68 @@
 .container {
-	max-width: 320px;
-	margin: 1rem auto 2rem auto;
-	padding: 1rem;
-	background-color: #adb5bd;
-	border-radius: 12px;
-	box-shadow: 2px 5px 5px 5px rgba(0, 0, 0, 0.11);
+  max-width: 320px;
+  margin: 1rem auto 2rem auto;
+  padding: 1rem;
+  background-color: #adb5bd;
+  border-radius: 12px;
+  box-shadow: 2px 5px 5px 5px rgba(0, 0, 0, 0.11);
 }
 
 .form {
-	padding-bottom: 1rem;
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-	width: 80%;
-	margin: 0 auto;
-	font-family: 'Roboto', sans-serif;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form-row {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
 }
 
 .form-row label {
-	font-size: 16px;
-	font-weight: 700;
-	text-transform: uppercase;
-	align-self: flex-start;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-self: flex-start;
 }
 
 .form-row input {
-	padding: 8px;
-	font-size: 16px;
-	width: 50%;
-	align-self: flex-start;
+  padding: 8px;
+  font-size: 16px;
+  width: 50%;
+  align-self: flex-start;
 }
 
 .form button {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	font-size: 16px;
-	width: 50%;
-	padding: 12px 12px;
-	border: none;
-	margin: 0 auto;
-	border-radius: 12px;
-	cursor: pointer;
-	background-color: #212529;
-	color: #fff;
-	transition: all 0.4s;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  width: 50%;
+  padding: 12px 12px;
+  border: none;
+  margin: 0 auto;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #212529;
+  color: #fff;
+  transition: all 0.4s;
 }
 
 .form button:hover,
 .form button:active {
-	color: #212529;
-	background-color: #dee2e6;
+  color: #212529;
+  background-color: #dee2e6;
 }
 
 .error-msg {
-	color: #ff6b6b;
-	font-size: 12px;
-	margin: -2px 0;
-	padding: 0;
-	align-self: flex-start;
+  color: #ff6b6b;
+  font-size: 12px;
+  margin: -2px 0;
+  padding: 0;
+  align-self: flex-start;
 }
